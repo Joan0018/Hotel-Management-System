@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Register page (not a fragment) -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cust_Staff_Shared.Cust_Staff_Fragments.Login">
+
+            <!-- background -->
+            <ImageView
+                android:id="@+id/iv_register_bg1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:backgroundTint="#F0FDFCFC"
+                android:scaleType="fitXY"
+                android:src="@drawable/signup_bg"
+                tools:layout_editor_absoluteX="-38dp"
+                tools:layout_editor_absoluteY="196dp"
+                android:contentDescription="@string/image_desc" />
+
+            <ImageView
+                android:id="@+id/iv_register_bg2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#BAFFFCFC"
+                android:backgroundTint="#34000000"
+                android:scaleType="fitXY"
+                android:src="@drawable/gray_color_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="39dp"
+                android:contentDescription="@string/image_desc"/>
+
+            <!-- back to MainActivity icon -->
+
+            <ImageView
+                android:id="@+id/iv_register_backicon"
+                android:layout_width="31dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/ic_back"
+                app:tint="@color/white"
+                android:contentDescription="@string/image_desc"/>
+
+
+    <ScrollView
+        android:id="@+id/root_layout"
+        android:layout_width="355dp"
+        android:layout_height="627dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- white color bg -->
+            <ImageView
+                android:id="@+id/iv_register_bg3"
+                android:layout_width="343dp"
+                android:layout_height="630dp"
+                android:paddingTop="2dp"
+                android:src="@drawable/white_bg_rounded"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="parent"
+                android:contentDescription="@string/image_desc"/>
+
+
+            <!-- register page image, upper part-->
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="291dp"
+                android:layout_height="201dp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_register_bg3"
+                app:srcCompat="@drawable/register_img"
+                android:contentDescription="@string/image_desc"/>
+
+
+            <TextView
+                android:id="@+id/tv_register_header"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="@string/txtCreateAcc"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="193dp"
+                android:layout_height="20dp"
+                android:text="@string/txtFillForm"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <!-- edit text field for user to input their info -->
+            <!-- get user full name, user email -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_register_name"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="@+id/iv_register_bg3"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="@+id/iv_register_bg3"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                app:layout_constraintWidth_percent="0.7">
+
+                <EditText
+                    android:id="@+id/edittext_register_name"
+                    android:layout_width="285dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="@string/full_name"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    tools:layout_editor_absoluteX="61dp"
+                    tools:layout_editor_absoluteY="295dp"
+                    android:importantForAutofill="no" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- get password 1st time & 2nd time -->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_register_email"
+                android:layout_width="285dp"
+                android:layout_height="48dp"
+                android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="@+id/iv_register_bg3"
+                app:layout_constraintHorizontal_bias="0.551"
+                app:layout_constraintStart_toStartOf="@+id/iv_register_bg3"
+                app:layout_constraintTop_toBottomOf="@+id/layout_register_name"
+                app:layout_constraintWidth_percent="0.7">
+
+                <EditText
+                    android:id="@+id/edittext_register_email"
+                    android:layout_width="285dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_register_password1"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/iv_register_bg3"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="@+id/iv_register_bg3"
+                app:layout_constraintTop_toBottomOf="@+id/layout_register_email"
+                app:layout_constraintWidth_percent="0.7">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#808080"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edittext_register_password1"
+                        android:layout_width="260dp"
+                        android:layout_height="45dp"
+                        android:ems="10"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textSize="15sp"
+                        android:importantForAutofill="no">
+                    </EditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--icon show password1 or not-->
+                <ImageView
+                    android:id="@+id/iv_password1_hidePassword"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_hide_psw"
+                    android:visibility="visible"
+                    android:contentDescription="@string/icon_eye_password"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_register_password2"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/iv_register_bg3"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="@+id/iv_register_bg3"
+                app:layout_constraintTop_toBottomOf="@+id/layout_register_password1"
+                app:layout_constraintWidth_percent="0.7">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#808080">
+
+                    <EditText
+                        android:id="@+id/edittext_register_password2"
+                        android:layout_width="260dp"
+                        android:layout_height="45dp"
+                        android:ems="10"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:textSize="15sp"
+                        android:importantForAutofill="no" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--icon show password2 or not-->
+                <ImageView
+                    android:id="@+id/iv_password2_hidePassword"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_hide_psw"
+                    android:contentDescription="@string/icon_eye_password"/>
+
+            </LinearLayout>
+
+            <!-- get phone number  -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_register_phonenum"
+                android:layout_width="285dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="#808080"
+                app:layout_constraintEnd_toEndOf="@+id/iv_register_bg3"
+                app:layout_constraintHorizontal_bias="0.517"
+                app:layout_constraintStart_toStartOf="@+id/iv_register_bg3"
+                app:layout_constraintTop_toBottomOf="@+id/layout_register_password2"
+                app:layout_constraintWidth_percent="0.7">
+
+                <EditText
+                    android:id="@+id/edittext_register_phonenum"
+                    android:layout_width="285dp"
+                    android:layout_height="45dp"
+                    android:ems="10"
+                    android:hint="@string/phone_number"
+                    android:inputType="textPersonName"
+                    android:textSize="15sp"
+                    android:importantForAutofill="no" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_register_submit"
+                android:layout_width="110dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_btn"
+                android:text="@string/register"
+                android:textColor="#EADBDB"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_register_bg3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_register_phonenum"
+                app:layout_constraintVertical_bias="0.187" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

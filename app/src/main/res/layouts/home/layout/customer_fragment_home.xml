@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- act as a fragment - declared in cust_page_navigation.xml -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Customer_Fragments.cust_home.CustHomeFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_cust_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        tools:layout_editor_absoluteX="271dp"
+        tools:layout_editor_absoluteY="59dp"
+        tools:listitem="@layout/customer_fragment_home_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

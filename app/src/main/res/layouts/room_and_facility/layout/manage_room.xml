@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Staff.room.Main.ManageRoom">
+
+    <!-- the upper app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_manage_room"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- toolbar-->
+        </LinearLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/room_menu_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:elevation="2dp"
+            app:layout_anchor="@+id/appBarLayoutConfirmRoom"
+            app:layout_anchorGravity="center">
+
+            <!-- back icon -->
+
+            <ImageView
+                android:id="@+id/manage_room_back_icon"
+                android:layout_width="31dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/todo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_back" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/manage_room_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Manage Room"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar_manage_room">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar_manage_room">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_roomType"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/room3" />
+
+                <View
+                    android:id="@+id/overlay_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:background="#80000000" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_room_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="289dp"
+                android:text="Room Description"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_room_occupancy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Occupancy: 2 guest"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_room_desc"
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_desc" />
+
+            <TextView
+                android:id="@+id/tv_room_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Price: RM 139.00"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_room_occupancy"
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_occupancy" />
+
+            <TextView
+                android:id="@+id/tv_room_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Size: 66 m2"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_room_price"
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_price" />
+
+            <TextView
+                android:id="@+id/tv_room_beds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="Beds: 1 double bed, 1 sofa bed"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_room_size"
+                app:layout_constraintTop_toBottomOf="@+id/tv_room_size" />
+
+            <ImageButton
+                android:id="@+id/btn_edit_room_desc"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/ic_edit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/btn_add_rooms"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/round_button_charcoal"
+                android:letterSpacing="0.05"
+                android:text="Add Room"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+
+            <!-- search bar -->
+            <EditText
+                android:id="@+id/rooms_search"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/custom_search_bar"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/teal_200"
+                android:hint="@string/search_here"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="@+id/btn_add_rooms"
+                app:layout_constraintStart_toStartOf="@+id/btn_add_rooms"
+                app:layout_constraintTop_toBottomOf="@+id/btn_add_rooms"
+                tools:targetApi="m" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_rooms"
+                tools:listitem="@layout/rooms_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/rooms_search"
+                app:layout_constraintStart_toStartOf="@+id/rooms_search"
+                app:layout_constraintTop_toBottomOf="@+id/rooms_search" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

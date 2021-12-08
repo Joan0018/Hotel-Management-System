@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="gray">#888b8d</color>
+    <color name="gray_white">#CDF8F8F8</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0F346F</color>
+    <color name="green">#13ce67</color>
+    <color name="red">#f95f62</color>
+
+    <!-- staff homepage - color of card  -->
+    <color name="pink">#FF182F</color>
+    <color name="smalt_blue">#00209B</color>
+    <color name="rio_grande_yellow">#CED900</color>
+    <color name="observatory_teal">#00927D</color>
+    <color name="tomato_orange">#FF6431</color>
+    <color name="electric_violet_purple">#B50BED</color>
+
+    <color name="dark_teal">#008080</color>
+    <color name="dark_purple">#7954A1</color>
+    <color name="charcoal">#323E42</color>
+    <color name="blue_300">#274F82</color>
+    <color name="royal_fuchsia">#cf3476</color>
+    <color name="dark_late_blue">#483d8b</color>
+    <color name="midnight_green">#004953</color>
+
+</resources>

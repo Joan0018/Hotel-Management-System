@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- declared the fragment page for each menu item -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cust_navigation"
+    app:startDestination="@+id/nav_home_cust">
+
+    <!-- follow the menu id & assign the layout to them, the android:name element is the kotlin file -->
+    <fragment
+        android:id="@+id/nav_home_cust"
+        android:name="com.example.mad_assignment.Customer_Fragments.cust_home.CustHomeFragment"
+        android:label="@string/hotel_name"
+        tools:layout="@layout/customer_fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_facility"
+        android:name="com.example.mad_assignment.Customer.Customer_Fragments.cust_facilities.Main.CustFacilitiesFragment"
+        android:label="@string/bookFaci"
+        tools:layout="@layout/customer_fragment_facilities" />
+
+    <fragment
+        android:id="@+id/nav_housekeeping"
+        android:name="com.example.mad_assignment.Customer.Customer_Fragments.cust_housekeeping.Main.CustHousekeepingFragment"
+        android:label="@string/bookHouseKeep"
+        tools:layout="@layout/customer_fragment_housekeeping" />
+
+<!--&lt;!&ndash;    Just testing for the image to firebase&ndash;&gt;-->
+<!--    <fragment-->
+<!--        android:id="@+id/nav_housekeeping"-->
+<!--        android:name="com.example.mad_assignment.Staff.Staff_Fragments.staff_housekeeping.Main.Main.StaffHousekeepingFragment"-->
+<!--        android:label="@string/bookHouseKeep"-->
+<!--        tools:layout="@layout/fragment_staff_housekeeping" />-->
+<!--&lt;!&ndash;    Just testing for the image to firebase&ndash;&gt;-->
+
+    <fragment
+        android:id="@+id/nav_TransHis_cust"
+        android:name="com.example.mad_assignment.Customer_Fragments.cust_trans_history.CustTransHistoryFragment"
+        android:label="@string/transaction_history"
+        tools:layout="@layout/customer_fragment_trans_history" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.mad_assignment.Cust_Staff_Shared.Cust_Staff_Fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!--- will be change to direct logout -->
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.mad_assignment.Cust_Staff_Shared.Cust_Staff_Fragments.LogoutFragment"
+        />
+</navigation>

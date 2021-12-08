@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the upper app bar and the staff service floating action button -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <!-- the upper app bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbar_staff1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- only a white rectangle-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_staff"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--include layout="@layout/fragment_profile" android:visibility="gone"/-->
+
+    <!-- customer service floating action button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_cust_service_staff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:backgroundTint="@color/white"
+        app:srcCompat="@drawable/ic_cust_services"
+        android:contentDescription="@string/image_desc" />
+
+    <!-- the part for locate fragment  -->
+
+    <fragment
+        android:id="@+id/nav_host_fragment_staff"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="52dp"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/staff_page_navigation" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

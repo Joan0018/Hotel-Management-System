@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Customer.Customer_Fragments.cust_trans_history.payment.cust_payment_transaction_details">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutPaymentOnlineBanking"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- toolbar-->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                android:elevation="2dp"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center"
+                app:title="@string/transactionDetailsStr">
+            </androidx.appcompat.widget.Toolbar>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe"
+        android:layout_width="0dp"
+        android:layout_height="239dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/payment_method_selection"
+        android:backgroundTint="#E4FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="189dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imgViewPaymentStatus"
+        android:layout_width="132dp"
+        android:layout_height="111dp"
+        app:layout_constraintEnd_toEndOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe"
+        app:layout_constraintStart_toStartOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe"
+        app:layout_constraintTop_toTopOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe" />
+
+    <TextView
+        android:id="@+id/tvPurchaseStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/green"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imgViewPaymentStatus"
+        app:layout_constraintStart_toStartOf="@+id/imgViewPaymentStatus"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewPaymentStatus" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/amountStr"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <TextView
+        android:id="@+id/tvTotalAmountValueDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <LinearLayout
+        android:id="@+id/ll_layout_bar_cust_payment_transaction_details"
+        android:layout_width="411dp"
+        android:layout_height="354dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/payment_method_selection"
+        android:backgroundTint="#E4FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe"
+        app:layout_constraintVertical_bias="0.111">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/payMethodStr"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/ll_layout_bar_cust_payment_transaction_details" />
+
+    <TextView
+        android:id="@+id/tvpaymentMethod"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/tvTotalAmountValueDetails"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/tvPaymentCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tvpaymentMethod"
+        app:layout_constraintTop_toBottomOf="@+id/tvpaymentMethod" />
+
+    <ImageView
+        android:id="@+id/imgVPaymentMethodLogo"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPaymentCompany"
+        app:layout_constraintEnd_toEndOf="@+id/tvpaymentMethod"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/tvpaymentMethod" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_layout_bar_cust_payment_transaction_details"
+        app:layout_constraintEnd_toEndOf="@+id/ll_layout_bar_cust_payment_transaction_details"
+        app:layout_constraintStart_toStartOf="@+id/ll_layout_bar_cust_payment_transaction_details"
+        app:layout_constraintTop_toTopOf="@+id/ll_layout_bar_cust_payment_onlineBanking_pbe" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTransactionDataForPayment"
+        android:layout_width="357dp"
+        android:layout_height="288dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_layout_bar_cust_payment_transaction_details"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
